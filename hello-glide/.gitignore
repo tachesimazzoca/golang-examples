@@ -1,0 +1,5 @@
+*~
+/bin
+/pkg
+/src/hello-glide/glide.lock
+/src/hello-glide/vendor
