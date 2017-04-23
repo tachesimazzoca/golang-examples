@@ -1,7 +1,7 @@
 GO_EXECUTABLE ?= go
 GOPATH := $(CURDIR)
 
-define fetch_git_repo 
+define fetch_git_repo
   if [ ! -e $2 ]; \
   then \
     git clone $1 $2; \
@@ -16,13 +16,13 @@ install-deps:
   "https://github.com/mitchellh/colorstring.git", \
   "src/vendor/github.com/mitchellh/colorstring")
 
-.PHONY: install
-install:
-	@$(GO_EXECUTABLE) install vendoring
-
 .PHONY: run
 run:
 	@$(GO_EXECUTABLE) run src/vendoring/main.go
+
+.PHONY: install
+install:
+	@$(GO_EXECUTABLE) install vendoring
 
 .PHONY: clean
 clean:

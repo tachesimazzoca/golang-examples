@@ -1,4 +1,4 @@
 *~
 /bin
 /pkg
-/vendor/github.com
+/src/vendor/github.com
