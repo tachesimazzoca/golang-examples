@@ -1,0 +1,5 @@
+*~
+/bin
+/pkg
+/src/hello-godep/Godeps
+/src/hello-godep/vendor
