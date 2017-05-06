@@ -12,3 +12,8 @@ For convenience, I would rather manage playground-URLs as bookmarks than `*.go` 
 ## Error
 
 * [The build-in function recover() in deferred functions can simplify error handling](https://play.golang.org/p/xwaww7xe27)
+
+## vs. C
+
+* [Unsafe pointer arithmetic in Go](https://play.golang.org/p/MJOBqYs__u)
+
