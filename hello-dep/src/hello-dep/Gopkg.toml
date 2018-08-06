@@ -1,0 +1,7 @@
+[[constraint]]
+  name = "github.com/mitchellh/go-homedir"
+  revision = "58046073cbffe2f25d425fe1331102f55cf719de"
+
+[prune]
+  go-tests = true
+  unused-packages = true
