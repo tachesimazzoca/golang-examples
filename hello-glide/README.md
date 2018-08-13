@@ -4,10 +4,7 @@
 # Fetch dependencies into vendor using glide
 $ make install-deps
 
-# Install binaries
-$ make install
-$ bin/hello-glide
-...
+$ make run
 
 # Remove all builds
 $ make clean

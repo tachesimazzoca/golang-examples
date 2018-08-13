@@ -5,8 +5,8 @@ GOPATH := $(CURDIR):$(GOPATH)
 install-deps:
 	@rm -rf src/hello-godep/Godeps
 	@rm -rf src/hello-godep/vendor
-	@go get "github.com/mitchellh/cli"
-	@go get "golang.org/x/sys/unix"
+	@go get -u "github.com/mitchellh/cli"
+	@go get -u "github.com/mattn/go-colorable"
 	@cd src/hello-godep && godep save
 	@rm -rf src/github.com
 	@rm -rf src/golang.org

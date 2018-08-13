@@ -1,4 +1,4 @@
-package: main
+package: github.com/tachesimazzoca/golang-examples/hello-glide
 import:
 - package: github.com/mitchellh/go-homedir
   version: b8bc1bf767474819792c23f32d8286a45736f1c6

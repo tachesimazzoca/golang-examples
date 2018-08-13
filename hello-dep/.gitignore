@@ -1,5 +1,2 @@
-*~
-/bin
-/pkg
-/src/hello-dep/Gopkg.lock
-/src/hello-dep/vendor
+/vendor
+/Gopkg.lock

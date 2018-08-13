@@ -1,13 +1,10 @@
-# golang-examples/hello-glide
+# golang-examples/hello-dep
 
 ```
-# Fetch dependencies into vendor using glide
+# Fetch dependencies into vendor using dep
 $ make install-deps
 
-# Install binaries
-$ make install
-$ bin/hello-glide
-...
+$ make run
 
 # Remove all builds
 $ make clean
