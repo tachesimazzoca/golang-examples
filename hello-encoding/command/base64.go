@@ -6,8 +6,6 @@ import (
 	"strings"
 )
 
-const SubCommandName = "base64"
-
 type Base64EncodeCommand struct {
 	Meta
 }
@@ -24,9 +22,9 @@ func (c *Base64EncodeCommand) Run(args []string) int {
 
 func (c *Base64EncodeCommand) Help() string {
 	helpText := `
-Usage: %s %s encode <string>
+Usage: %s base64 encode <string>
 `
-	return strings.TrimSpace(fmt.Sprintf(helpText, c.AppName, SubCommandName))
+	return strings.TrimSpace(fmt.Sprintf(helpText, c.AppName))
 }
 
 func (c *Base64EncodeCommand) Synopsis() string {
@@ -53,9 +51,9 @@ func (c *Base64DecodeCommand) Run(args []string) int {
 
 func (c *Base64DecodeCommand) Help() string {
 	helpText := `
-Usage: %s %s decode <string>
+Usage: %s base64 decode <string>
 `
-	return strings.TrimSpace(fmt.Sprintf(helpText, c.AppName, SubCommandName))
+	return strings.TrimSpace(fmt.Sprintf(helpText, c.AppName))
 }
 
 func (c *Base64DecodeCommand) Synopsis() string {

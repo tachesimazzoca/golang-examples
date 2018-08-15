@@ -28,6 +28,11 @@ func main() {
 				Meta: *commandMeta,
 			}, nil
 		},
+		"hex dump": func() (cli.Command, error) {
+			return &command.HexDumpCommand{
+				Meta: *commandMeta,
+			}, nil
+		},
 	}
 
 	status, err := cmd.Run()
