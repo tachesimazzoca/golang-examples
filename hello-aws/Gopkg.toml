@@ -1,0 +1,15 @@
+[[constraint]]
+  name = "github.com/mitchellh/go-homedir"
+  branch = "master"
+
+[[constraint]]
+  name = "github.com/aws/aws-sdk-go"
+  branch = "master"
+
+[[constraint]]
+  name = "github.com/spf13/cobra"
+  branch = "master"
+
+[prune]
+  go-tests = true
+  unused-packages = true
