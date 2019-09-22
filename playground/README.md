@@ -8,6 +8,7 @@ For convenience, I would rather manage playground-URLs as bookmarks than `*.go` 
 
 * [An interface value is nil only if the inner value and type are both unset, (nil, nil).](https://play.golang.org/p/QqOzGpJxRM)
 * [The receiver does not have to be a struct.](https://play.golang.org/p/UeFA8-NAZp)
+* [You can declare a method on non-struct types, too.](https://play.golang.org/p/i4B0g-Ud2qZ)
 
 ## Error
 
