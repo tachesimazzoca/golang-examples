@@ -26,4 +26,4 @@ For convenience, I would rather manage playground-URLs as bookmarks than `*.go` 
 * [Goroutines run in the same address space, so access to shared memory must be synchronized.](https://play.golang.org/p/z5fMBo64wat)
 * [Received values from channel are not always in order.](https://play.golang.org/p/WKK9_3x5IbA)
 * [The range loop can receive values from the channel repeatedly until it is closed.](https://play.golang.org/p/SCP7IPzTT9j)
-
+* [A select blocks until one of its cases can run, then it executes that case.](https://play.golang.org/p/unikzUz8NMk)
