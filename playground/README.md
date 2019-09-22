@@ -20,3 +20,7 @@ For convenience, I would rather manage playground-URLs as bookmarks than `*.go` 
 ## Conversion
 
 * [String to bytes](https://play.golang.org/p/_pr8lhj8Rp0)
+
+## Concurrency
+
+* [Goroutines run in the same address space, so access to shared memory must be synchronized.](https://play.golang.org/p/z5fMBo64wat)
