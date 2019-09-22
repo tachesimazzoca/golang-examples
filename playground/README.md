@@ -28,4 +28,4 @@ For convenience, I would rather manage playground-URLs as bookmarks than `*.go` 
 * [The range loop can receive values from the channel repeatedly until it is closed.](https://play.golang.org/p/iS9JQ-c3EFe)
 * [A select blocks until one of its cases can run, then it executes that case.](https://play.golang.org/p/unikzUz8NMk)
 * [Compare binary trees using channel.](https://play.golang.org/p/kTI6c830EU9)
-
+* [A WaitGroup waits for a collection of goroutines to finish.](https://play.golang.org/p/ISvMeimjs0K)
