@@ -24,3 +24,5 @@ For convenience, I would rather manage playground-URLs as bookmarks than `*.go` 
 ## Concurrency
 
 * [Goroutines run in the same address space, so access to shared memory must be synchronized.](https://play.golang.org/p/z5fMBo64wat)
+* [Received values from channel are not always in order.](https://play.golang.org/p/WKK9_3x5IbA)
+
