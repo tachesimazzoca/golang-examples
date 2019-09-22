@@ -1,11 +1,15 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
 	"os"
+	"reflect"
 	"strings"
 	"testing"
 )
+
+var LineBreak = fmt.Sprintln()
 
 func testReadLines(t *testing.T, xs []string, sep string) {
 	lines, _ := ReadLines(strings.NewReader(strings.Join(xs[:], sep) + sep))
@@ -29,21 +33,18 @@ func TestReadLinesWithWindowsNewLine(t *testing.T) {
 	testReadLines(t, []string{"foo", "bar", "", "baz", "", ""}, sep)
 }
 
-func TestReadLinesFromFile(t *testing.T) {
+func TestReadLines(t *testing.T) {
 	tf, err := ioutil.TempFile("", "utils_test_")
 	if err != nil {
 		t.Error(err)
 	}
 	defer os.Remove(tf.Name())
 
-	expectedItems := []string{"hello", "ioutil", "TempFile."}
-	content := strings.Join(expectedItems, "\n")
-
-	if _, err := tf.WriteString(content); err != nil {
-		t.Error(err)
-	}
-
-	if _, err := tf.Seek(0, os.SEEK_SET); err != nil {
+	content := `now
+testing
+ReadLines
+`
+	if err := ioutil.WriteFile(tf.Name(), []byte(content), 0644); err != nil {
 		t.Error(err)
 	}
 
@@ -51,11 +52,87 @@ func TestReadLinesFromFile(t *testing.T) {
 	if err != nil {
 		t.Error(err)
 	}
-	if len(lines) != len(expectedItems) {
-		t.Errorf("The number of lines: expeced %d, actual %d", len(expectedItems), len(lines))
+
+	expectedLines := []string{"now", "testing", "ReadLines"}
+	if !reflect.DeepEqual(lines, expectedLines) {
+		t.Errorf("lines expected: %s, actual: %s", expectedLines, lines)
 	}
-	actualContent := strings.Join(lines, "\n")
-	if content != actualContent {
-		t.Errorf("The returned lines: expeced %s, actual %s", content, actualContent)
+}
+
+func TestWriteLines(t *testing.T) {
+	tf, err := ioutil.TempFile("", "utils_test_")
+	if err != nil {
+		t.Error(err)
+	}
+	defer os.Remove(tf.Name())
+
+	lines := []string{"now", "testing", "WriteLines"}
+	if err := WriteLines(tf, lines); err != nil {
+		t.Error(err)
+	}
+
+	bs, err := ioutil.ReadFile(tf.Name())
+	if err != nil {
+		t.Error(err)
+	}
+
+	expectedContent := `now
+testing
+WriteLines
+`
+	if string(bs) != expectedContent {
+		t.Error(bs)
+	}
+}
+
+func TestReadLinesFromFile(t *testing.T) {
+	tf, err := ioutil.TempFile("", "utils_test_")
+	if err != nil {
+		t.Error(err)
+	}
+	defer os.Remove(tf.Name())
+
+	content := `now
+testing
+ReadLinesFrom
+`
+	if err := ioutil.WriteFile(tf.Name(), []byte(content), 0644); err != nil {
+		t.Error(err)
+	}
+
+	lines, err := ReadLinesFromFile(tf.Name())
+	if err != nil {
+		t.Error(err)
+	}
+
+	expectedLines := []string{"now", "testing", "ReadLinesFrom"}
+	if !reflect.DeepEqual(lines, expectedLines) {
+		t.Errorf("lines expected: %s, actual: %s", expectedLines, lines)
+	}
+}
+
+func TestWriteLinesToFile(t *testing.T) {
+	tf, err := ioutil.TempFile("", "utils_test_")
+	if err != nil {
+		t.Error(err)
+	}
+	defer os.Remove(tf.Name())
+
+	lines := []string{"now", "testing", "WriteLinesTo"}
+	if err := WriteLinesToFile(tf.Name(), lines); err != nil {
+		t.Error(err)
+	}
+
+	bs, err := ioutil.ReadFile(tf.Name())
+	if err != nil {
+		t.Error(err)
+	}
+
+	expectedContent := `now
+testing
+WriteLinesTo
+`
+	if string(bs) != expectedContent {
+		t.Error(bs)
 	}
 }
