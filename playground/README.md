@@ -18,6 +18,10 @@ For convenience, I would rather manage playground-URLs as bookmarks than `*.go` 
 
 * [Unsafe pointer arithmetic in Go](https://play.golang.org/p/MJOBqYs__u)
 
+## Slice
+
+* [Slice bounds out of range](https://play.golang.org/p/FSvsi5WTkaz)
+
 ## Conversion
 
 * [String to bytes](https://play.golang.org/p/_pr8lhj8Rp0)
