@@ -38,4 +38,5 @@ For convenience, I would rather manage playground-URLs as bookmarks than `*.go` 
 ## Tips
 
 * [Concatenate arrays using a variadic function](https://play.golang.org/p/b-9uWwaCsjy)
+* [Format values in a Go-syntax representation](https://play.golang.org/p/V04ykSj4u5d)
 
