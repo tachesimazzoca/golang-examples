@@ -1,7 +1,3 @@
-.PHONY: install-deps
-install-deps:
-	@dep ensure
-
 .PHONY: build
 build:
 	@mkdir -p build
@@ -10,5 +6,3 @@ build:
 .PHONY: clean
 clean:
 	@rm -rf build
-	@rm -rf vendor
-	@rm -rf Gopkg.lock

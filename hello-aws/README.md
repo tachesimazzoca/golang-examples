@@ -1,7 +1,6 @@
 # golang-examples/hello-aws
 
 ```sh
-$ make install-deps
 $ make build
 
 # Show configuration
