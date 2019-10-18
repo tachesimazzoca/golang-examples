@@ -1,7 +1,3 @@
-.PHONY: install-deps
-install-deps:
-	@dep ensure
-
 .PHONY: run
 run:
 	@go run main.go
@@ -14,5 +10,3 @@ build:
 .PHONY: clean
 clean:
 	@rm -rf build
-	@rm -rf vendor
-	@rm -rf Gopkg.lock
